@@ -33,6 +33,7 @@ public class loans extends JFrame {
         initComponents();
     }
 
+    //Add new record on table
     private void button1ActionPerformed(ActionEvent e) throws ClassNotFoundException, SQLException {
         // TODO add your code here
 
@@ -104,6 +105,7 @@ public class loans extends JFrame {
         indice=textField1.getText();
     }
 
+    //Edit record on table
     private void button2ActionPerformed(ActionEvent e) throws ClassNotFoundException, SQLException {
         // TODO add your code here
         if(validation() == true){
@@ -137,6 +139,7 @@ public class loans extends JFrame {
 
     }
 
+    //Delete record on table
     private void button3ActionPerformed(ActionEvent e) throws ClassNotFoundException, SQLException {
         // TODO add your code here
         if(validation() == true) {
@@ -388,7 +391,7 @@ public class loans extends JFrame {
 
     }
 
-
+    //clear textbox on form
     public boolean clean_textbox(){
         try{
             textField1.setText("");
@@ -410,7 +413,7 @@ public class loans extends JFrame {
     }
 
 
-
+    //print info on table
     public void load_Info() throws ClassNotFoundException, SQLException {
 
         Class.forName("com.mysql.jdbc.Driver");
@@ -449,7 +452,7 @@ public class loans extends JFrame {
         int v=1;
     }
 
-
+    //Adapt form to requirement
     public void sss(){
 
         String[] cols = {"Number", "Name","Amount", "Years", "Type of Loan"};
