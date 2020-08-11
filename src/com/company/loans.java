@@ -41,9 +41,9 @@ public class loans extends JFrame {
                 Class.forName("com.mysql.jdbc.Driver");
 
                 //local connection with WAMP
-                con1= DriverManager.getConnection("jdbc:mysql://localhost:3308/loan","root","");
+
                 //connection to Submit
-                //con1= DriverManager.getConnection("jdbc:mysql://localhost/loan","root","");
+                con1= DriverManager.getConnection("jdbc:mysql://localhost/loan","root","");
 
 
                 if(e.getSource()==button1) {
@@ -111,9 +111,9 @@ public class loans extends JFrame {
             Class.forName("com.mysql.jdbc.Driver");
 
             //local connection with WAMP
-            con1= DriverManager.getConnection("jdbc:mysql://localhost:3308/loan","root","");
+            //con1= DriverManager.getConnection("jdbc:mysql://localhost:3308/loan","root","");
             //connection to Submit
-            //con1= DriverManager.getConnection("jdbc:mysql://localhost/loan","root","");
+            con1= DriverManager.getConnection("jdbc:mysql://localhost/loan","root","");
 
 
             query = con1.prepareStatement("UPDATE loantable set clientno=?, clientname=?, loanamount=?, years=?,loantype=? where clientno = ? ");
@@ -143,9 +143,9 @@ public class loans extends JFrame {
             Class.forName("com.mysql.jdbc.Driver");
 
             //local connection with WAMP
-            con1 = DriverManager.getConnection("jdbc:mysql://localhost:3308/loan", "root", "");
+            //con1 = DriverManager.getConnection("jdbc:mysql://localhost:3308/loan", "root", "");
             //connection to Submit
-            //con1= DriverManager.getConnection("jdbc:mysql://localhost/loan","root","");
+            con1= DriverManager.getConnection("jdbc:mysql://localhost/loan","root","");
 
 
 
@@ -415,7 +415,8 @@ public class loans extends JFrame {
 
         Class.forName("com.mysql.jdbc.Driver");
 
-        con1= DriverManager.getConnection("jdbc:mysql://localhost:3308/loan","root","");
+        //con1= DriverManager.getConnection("jdbc:mysql://localhost:3308/loan","root","");
+        con1= DriverManager.getConnection("jdbc:mysql://localhost/loan","root","");
 
         query = con1.prepareStatement("select * from loantable");
 
